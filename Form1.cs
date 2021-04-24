@@ -25,6 +25,7 @@ namespace NTPVize
             XmlDocument document1 = new XmlDocument();
             document1.Load(hava_durumu_link);
             XmlElement root = document1.DocumentElement;
+            XmlNodeList nodes = root.SelectNodes("sehirler");
 
 
 
