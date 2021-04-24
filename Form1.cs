@@ -26,6 +26,12 @@ namespace NTPVize
             document1.Load(hava_durumu_link);
             XmlElement root = document1.DocumentElement;
             XmlNodeList nodes = root.SelectNodes("sehirler");
+            foreach (XmlNode node in nodes)
+            {
+                string ili = node["ili"].InnerText;
+                string durum = node["Durum"].InnerText;
+                string maks_sicaklik = node["Mak"].InnerText;
+            }
 
 
 
