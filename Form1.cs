@@ -38,6 +38,8 @@ namespace NTPVize
                 row.Cells[1].Value = durum;
                 row.Cells[2].Value = maks_sicaklik;
                 row.Cells[3].Value = min_sicaklik;
+                dataGridView1.Rows.Add(row);
+
             }
 
 
