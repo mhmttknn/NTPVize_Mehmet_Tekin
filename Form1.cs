@@ -31,6 +31,13 @@ namespace NTPVize
                 string ili = node["ili"].InnerText;
                 string durum = node["Durum"].InnerText;
                 string maks_sicaklik = node["Mak"].InnerText;
+                string min_sicaklik = node["Min"].InnerText;
+
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                row.Cells[0].Value = ili;
+                row.Cells[1].Value = durum;
+                row.Cells[2].Value = maks_sicaklik;
+                row.Cells[3].Value = min_sicaklik;
             }
 
 
