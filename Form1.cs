@@ -40,10 +40,22 @@ namespace NTPVize
                 row.Cells[3].Value = min_sicaklik;
                 dataGridView1.Rows.Add(row);
 
+
             }
 
 
 
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow secili_satir in dataGridView1.Rows)
+            {
+                if (Convert.ToInt32(secili_satir.Cells[2].Value)>16)
+                {
+                    secili_satir.DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
         }
     }
 }

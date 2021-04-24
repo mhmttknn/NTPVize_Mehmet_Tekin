@@ -31,6 +31,10 @@ namespace NTPVize
         {
             this.btnHavaDurumuBilgileriniAl = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clİller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMakSicaklik = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMinSicaklik = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,12 +51,46 @@ namespace NTPVize
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clİller,
+            this.clDurum,
+            this.clMakSicaklik,
+            this.clMinSicaklik});
             this.dataGridView1.Location = new System.Drawing.Point(12, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(776, 359);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            // 
+            // clİller
+            // 
+            this.clİller.HeaderText = "İller";
+            this.clİller.MinimumWidth = 6;
+            this.clİller.Name = "clİller";
+            this.clİller.Width = 125;
+            // 
+            // clDurum
+            // 
+            this.clDurum.HeaderText = "Durum";
+            this.clDurum.MinimumWidth = 6;
+            this.clDurum.Name = "clDurum";
+            this.clDurum.Width = 125;
+            // 
+            // clMakSicaklik
+            // 
+            this.clMakSicaklik.HeaderText = "Maksimum Sıcaklık";
+            this.clMakSicaklik.MinimumWidth = 6;
+            this.clMakSicaklik.Name = "clMakSicaklik";
+            this.clMakSicaklik.Width = 125;
+            // 
+            // clMinSicaklik
+            // 
+            this.clMinSicaklik.HeaderText = "Minimum Sıcaklık";
+            this.clMinSicaklik.MinimumWidth = 6;
+            this.clMinSicaklik.Name = "clMinSicaklik";
+            this.clMinSicaklik.Width = 125;
             // 
             // Form1
             // 
@@ -72,6 +110,10 @@ namespace NTPVize
 
         private System.Windows.Forms.Button btnHavaDurumuBilgileriniAl;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clİller;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clDurum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clMakSicaklik;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clMinSicaklik;
     }
 }
 
